@@ -1,0 +1,73 @@
+/* pseudo class */
+
+/* unvisited link */
+a:link{
+    color: red;
+}
+
+/* visited link */
+a:visited{
+    color: royalblue;
+}
+
+/* mouse on link */
+a:hover{
+    color: palevioletred;
+}
+
+/* pseudo element */
+h1::before{
+    content: "hey";
+    color: red;
+}
+h1::after{
+    content: "vardona";
+    color: aqua;
+}
+h2::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: lightskyblue;
+    display: inline-block;
+    border-radius: 100%;
+}
+
+.circle{
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    position: absolute;
+}
+.circle2{
+    left: 100px;
+}
+.heart{
+    position: relative;
+    left: 50%;
+    top: 200px;
+    width: 250px;
+    height: 250px;
+    animation: beat 3s infinite;
+}
+
+.square{
+    background-color: red;
+    width: 120px;
+    height: 120px;
+    transform: rotate(45deg);
+    position:absolute;
+    left: 50px;
+    top: 50px;
+}
+
+@keyframes beat{
+    0% {transform: scale(1);}
+    20% {transform: scale(1.5);}
+    40% {transform: scale(1);}
+    60% {transform: scale(1.5);}
+    80% {transform: scale(1);}
+    100% {transform: scale(1.5);}
+}
+
